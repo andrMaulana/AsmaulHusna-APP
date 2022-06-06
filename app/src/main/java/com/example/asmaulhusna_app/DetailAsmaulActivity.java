@@ -16,11 +16,13 @@ import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 
 public class DetailAsmaulActivity extends AppCompatActivity {
+//    menampung beberapa properti yang dibutuhkan
     private final String TAG = "DetailAsmaulActivity";
     TextView ayat, arti;
     JustifiedTextView keterangan, meneladani;
 
 
+//    Ketika aplikasi di jalankan akan memuat beberapa properti dan methodnya
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,14 +44,13 @@ public class DetailAsmaulActivity extends AppCompatActivity {
         keterangan = (JustifiedTextView) findViewById(R.id.keterangan);
         meneladani = (JustifiedTextView) findViewById(R.id.meneladani);
 
-
+// Menampung data yang sudah di bawa pada inten sebelumnya
         String ayat1 = getIntent().getStringExtra("inten_arabic");
         String latin1 = getIntent().getStringExtra("inten_latin");
         String arti1 = getIntent().getStringExtra("inten_terjemahan");
         String keterangan1 = getIntent().getStringExtra("inten_keterangan");
         String meneladani1 = getIntent().getStringExtra("inten_amalan");
-//        Log.d(TAG, String.valueOf(position));
-//
+//  Menampilkan Detai Data AsmauL Husna
         collapsingToolbar.setTitle(latin1);
         ayat.setText(ayat1);
         arti.setText(arti1);
